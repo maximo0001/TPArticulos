@@ -35,6 +35,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnMarca = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -108,11 +110,32 @@
             this.txtFiltro.TabIndex = 6;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
+            // btnCategoria
+            // 
+            this.btnCategoria.Location = new System.Drawing.Point(333, 466);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(156, 138);
+            this.btnCategoria.TabIndex = 7;
+            this.btnCategoria.Text = "Gestionar Categoria";
+            this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
+            // 
+            // btnMarca
+            // 
+            this.btnMarca.Location = new System.Drawing.Point(510, 466);
+            this.btnMarca.Name = "btnMarca";
+            this.btnMarca.Size = new System.Drawing.Size(156, 138);
+            this.btnMarca.TabIndex = 8;
+            this.btnMarca.Text = "Gestionar Marca";
+            this.btnMarca.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 633);
+            this.Controls.Add(this.btnMarca);
+            this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.btnEliminar);
@@ -139,6 +162,8 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Button btnMarca;
     }
 }
 

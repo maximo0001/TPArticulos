@@ -38,5 +38,46 @@ namespace Funcionalidad
                 datos.cerrarConexion();
             }
         }
+
+        public void Agregar(Categoria nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into CATEGORIAS (Descripcion) values (@descripcion)");
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("delete from CATEGORIAS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally 
+            {
+                datos.cerrarConexion(); 
+            }
+        }
     }
 }

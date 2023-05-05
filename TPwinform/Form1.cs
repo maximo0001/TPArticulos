@@ -129,5 +129,12 @@ namespace TPwinform
             modificar.ShowDialog();
             cargar();
         }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            frmGestionCategoria categoria = new frmGestionCategoria();
+            categoria.ShowDialog();
+
+        }
     }
 }

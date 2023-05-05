@@ -54,7 +54,7 @@ namespace Funcionalidad
 
         //
         //Agregar
-        //          -falta hacer en el form
+        //          
         public void Agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
