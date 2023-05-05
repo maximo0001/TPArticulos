@@ -136,5 +136,11 @@ namespace TPwinform
             categoria.ShowDialog();
 
         }
+
+        private void btnMarca_Click(object sender, EventArgs e)
+        {
+            frmGestionMarca marca = new frmGestionMarca();
+            marca.ShowDialog();
+        }
     }
 }

@@ -128,6 +128,7 @@
             this.btnMarca.TabIndex = 8;
             this.btnMarca.Text = "Gestionar Marca";
             this.btnMarca.UseVisualStyleBackColor = true;
+            this.btnMarca.Click += new System.EventHandler(this.btnMarca_Click);
             // 
             // Form1
             // 
