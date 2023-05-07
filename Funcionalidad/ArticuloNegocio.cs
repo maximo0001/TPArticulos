@@ -9,7 +9,6 @@ using dominio;
 
 namespace Funcionalidad
 {
-    //imito el nombre de clase de los videos porque no se como ponerle
     public class ArticuloNegocio
     {
        public List<Articulo> Listar()
@@ -18,7 +17,7 @@ namespace Funcionalidad
             List<Articulo> lista = new List<Articulo>();
             try
             {
-                datos.setearConsulta("select a.Id, Codigo, Nombre, a.Descripcion, m.Id IdMarcas, c.Id IdCategorias, ImagenUrl, Precio from ARTICULOS a, MARCAS m, CATEGORIAS c,IMAGENES i where m.Id = a.IdMarca and c.Id = a.IdCategoria and i.IdArticulo = a.Id");
+                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, I.ImagenUrl, A.Precio FROM ARTICULOS AS A, IMAGENES AS I WHERE A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -29,9 +28,9 @@ namespace Funcionalidad
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Marca = new Marca();
-                    aux.Marca.Id = (int)datos.Lector["IdMarcas"];
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
                     aux.Categoria = new Categoria();
-                    aux.Categoria.Id = (int)datos.Lector["IdCategorias"];
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
                     aux.Precio = (float)(decimal)datos.Lector["Precio"];    
 
@@ -65,8 +64,8 @@ namespace Funcionalidad
                 datos.setearParametro("@codigo", nuevo.CodigoArticulo);
                 datos.setearParametro("@nombre", nuevo.Nombre);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
-                datos.setearParametro("@marca", nuevo.Marca);
-                datos.setearParametro("@categoria", nuevo.Categoria);
+                datos.setearParametro("@marca", nuevo.Marca.Id);
+                datos.setearParametro("@categoria", nuevo.Categoria.Id);
                 datos.setearParametro("@precio", nuevo.Precio);
                 datos.setearParametro("@imagen", nuevo.UrlImagen);
                 datos.ejecutarAccion();
@@ -83,7 +82,7 @@ namespace Funcionalidad
         }
         //
         //ELIMINAR
-        //          -falta hacer en el form
+        //          
         public void Eliminar(int id)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -106,7 +105,7 @@ namespace Funcionalidad
 
         //
         //  MODIFICAR
-        //          -falta hacer en el form
+        //          
         public void Modificar(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();
