@@ -58,6 +58,12 @@
     <Compile Include="GestionCategoria.Designer.cs">
       <DependentUpon>GestionCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionImagen.Designer.cs">
+      <DependentUpon>GestionImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCategoria.resx">
       <DependentUpon>GestionCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionImagen.resx">
+      <DependentUpon>GestionImagen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionMarca.resx">
       <DependentUpon>GestionMarca.cs</DependentUpon>

@@ -37,6 +37,7 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.btnMarca = new System.Windows.Forms.Button();
+            this.btnImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -130,11 +131,22 @@
             this.btnMarca.UseVisualStyleBackColor = true;
             this.btnMarca.Click += new System.EventHandler(this.btnMarca_Click);
             // 
+            // btnImagen
+            // 
+            this.btnImagen.Location = new System.Drawing.Point(161, 466);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(156, 138);
+            this.btnImagen.TabIndex = 9;
+            this.btnImagen.Text = "Gestionar Imagen";
+            this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 633);
+            this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.txtFiltro);
@@ -165,6 +177,7 @@
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Button btnMarca;
+        private System.Windows.Forms.Button btnImagen;
     }
 }
 

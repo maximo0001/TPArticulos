@@ -142,5 +142,11 @@ namespace TPwinform
             frmGestionMarca marca = new frmGestionMarca();
             marca.ShowDialog();
         }
+
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            frmGestionImagen imagen = new frmGestionImagen();
+            imagen.ShowDialog();
+        }
     }
 }
